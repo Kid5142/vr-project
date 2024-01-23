@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kitchen Table
+* source:	https://sketchfab.com/3d-models/kitchen-table-ec12601aca1c4f73878de8e985b06bfe
+* author:	aleixparellada95 (https://sketchfab.com/aleixparellada95)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kitchen Table" (https://sketchfab.com/3d-models/kitchen-table-ec12601aca1c4f73878de8e985b06bfe) by aleixparellada95 (https://sketchfab.com/aleixparellada95) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
