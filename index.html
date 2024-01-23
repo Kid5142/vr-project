@@ -1,0 +1,202 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene >
+      <!-- Camera -->
+  <a-entity id="Camera" position="35 5.5 77">
+    <a-camera universal-controls wasd-controls="acceleration: 150">
+      <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.008;
+                      radiusInner: 0.005; segmentsTheta: 32" material="color: black; shader: flat" position="0 0 -0.75"></a-entity>
+    </a-camera>
+  </a-entity>
+      <!-- Environment -->
+<a-entity id="environment" environment="preset: forest; fog: 10; seed: 343; playArea: 20; groundColor: green; dressingAmount: 5; ground: flat; dressingScale: 2; lighting: none; skyType: atmosphere; groundTexture: walkernoise" visible="" position="-5.862 -0.5 11.702"><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #92dacf; intensity: 0.6; groundColor: green" visible=""></a-entity><a-entity class="environment" position="-1.2 0.88 -0.55" light="intensity: 0.6; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.18" shadow="cast: false; receive: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: [object Object]; bottomColor: [object Object]" visible="" geometry=""></a-sky><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #92dacf; intensity: 0.6; groundColor: green" visible="false"></a-entity><a-entity class="environment" position="-1.2 0.88 -0.55" light="intensity: 0.6; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible="false"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.18" shadow="cast: false; receive: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: [object Object]; bottomColor: [object Object]" visible="" geometry=""></a-sky><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #CEE4F0; intensity: 0.37734458830187423; groundColor: green" visible="false"></a-entity><a-entity class="environment" position="-1.2 0.88 -0.55" light="intensity: 0.37734458830187423; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible="false"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.18" shadow="cast: false; receive: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="color: #24b59f; shader: skyshader; sunPosition: -0.7563943317323842 0.5546891766037485 -0.34668073537734284" visible="" geometry=""></a-sky><a-entity id="stars"></a-entity><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #CEE4F0; intensity: 0.37734458830187423; groundColor: green" visible="false"></a-entity><a-entity class="environment" position="-1.2 0.88 -0.55" light="intensity: 0.37734458830187423; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible="false"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.18" shadow="cast: false; receive: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader: skyshader; sunPosition: -0.7563943317323842 0.5546891766037485 -0.34668073537734284" visible="" geometry=""></a-sky><a-entity id="stars"></a-entity></a-entity>
+
+      <!-- **************************** Assets **************************** -->
+      <a-assets>
+        <a-asset-item id="wallLemp" src="asset/light/wall_lamp/scene.gltf"></a-asset-item>
+        <a-asset-item id="sofa" src="asset/item/sofa/scene.gltf"></a-asset-item>
+        <a-asset-item id="flower" src="asset/scene/flower/garden_flower_-_vegetation/scene.gltf"></a-asset-item>
+        <a-asset-item id="lightSwitch" src="asset/light/modern_light_switches/scene.gltf" ></a-asset-item>
+        <!-- Video -->
+        <video id="tv-video" src="asset/video/Dj Kantik - Teriyaki Boyz - Tokyo Drift & Sean Paul - Temperature (Remix)-(1080p).mp4"></video>
+      </a-assets>
+
+      <!-- **************************** JavaScript **************************** -->
+      <script>
+        AFRAME.registerComponent('door', {
+          init: function () {
+            var isOpen = false;
+            this.el.addEventListener('click', () => {
+              isOpen = !isOpen;
+              if (isOpen) {
+                this.el.setAttribute('animation', 'property: rotation; to: 0 -90 0; dur: 1000');
+              } else {
+                this.el.setAttribute('animation', 'property: rotation; to: 0 0 0; dur: 1000');
+              }
+            });
+          }
+        });
+
+        AFRAME.registerComponent('doorinvert', {
+          init: function () {
+            var isOpen = false;
+            this.el.addEventListener('click', () => {
+              isOpen = !isOpen;
+              if (isOpen) {
+                this.el.setAttribute('animation', 'property: rotation; to: 0 90 0; dur: 1000');
+              } else {
+                this.el.setAttribute('animation', 'property: rotation; to: 0 0 0; dur: 1000');
+              }
+            });
+          }
+        });  
+
+        AFRAME.registerComponent('switch-light', {
+    init: function () {
+      this.el.addEventListener('click', function () {
+        var lightEl = document.querySelector('#light');
+        if (lightEl.getAttribute('light').intensity === 0) {
+          lightEl.setAttribute('light', 'intensity', 1);
+        } else {
+          lightEl.setAttribute('light', 'intensity', 0);
+        }
+      });
+    }
+  });
+
+  AFRAME.registerComponent('toggle-video', {
+    init: function () {
+      this.el.addEventListener('click', function () {
+        var video = document.querySelector('#tv-video');
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    }
+  });
+       
+      </script>
+
+
+<!-- Model -->
+<a-entity id="Model">
+  <a-entity gltf-model="/asset/car2/scene.gltf" position="68.11698 -0.5 32.68889" id="car" scale="10 10 10"></a-entity>
+  <a-entity gltf-model="/asset/dog/scene.gltf" position="57.228 2.98617 86.172" id="dog" scale="6 6 6" rotation="0 180 0"></a-entity>
+  <a-entity id="Sofa" gltf-model="#sofa" position="-14.53819 3.42104 28.23459" scale="10 10 10"></a-entity>
+  <a-entity id="Flower" gltf-model="#flower" position="25.77989 -0.32793 69.54256" scale=""></a-entity>
+  <a-entity id="lightSwitch" gltf-model="asset/light/modern_light_switches/scene.gltf" position="27.797 7.533 64.397" scale="4 4 4" rotation="0 180 0" class="intersectable" switch-light="" shadow=""></a-entity>
+  <a-entity id="glass-table" gltf-model="asset/item/table/glass_table/scene.gltf" position="-15.15829 -0.328 44.38333" scale="5 3.5 5" rotation="0 90 0"></a-entity>
+  <a-entity id="Chandeliers" gltf-model="asset/light/chandelier_black/scene.gltf" position="-14.974 14.835 44.496" scale="0.05 0.05 0.05">
+  <a-entity id="light" light="type: point; decay: 0.5; distance: 70; color: #fff700; intensity: 0" position="0.77534 18.86631 1.56202" rotation="" scale="10 10 10"></a-entity>
+  </a-entity>
+  <a-entity id="wallLempRight" gltf-model="#wallLemp" position="38.58162 7.68622 65.95438" scale="2 2 2">
+  <a-entity id="light" light="type: point; decay: 0.5; distance: 50; color: #fff700" position="0.58226 1.51357 0.23067" scale="0.5 0.5 0.5"></a-entity>
+  </a-entity>
+  <a-entity id="wallLempLeft" gltf-model="#wallLemp" position="25.58162 7.68622 65.95438" scale="2 2 2">
+  <a-entity id="light" light="type: point; decay: 0.5; distance: 50; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
+  </a-entity>
+  <a-entity id="Bed" gltf-model="asset/item/bed/scene.gltf" position="-63.24779 -0.61381 5.44552" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
+  <a-entity id="AirCondition" gltf-model="asset/item/Air Condition/air_condition/scene.gltf" position="-78.77564 15.82384 2.61133" scale="0.1 0.1 0.1" rotation="0 90 0"></a-entity>
+  <a-entity id="Fridge" gltf-model="asset/item/fridge/scene.gltf" position="2.70033 0.25397 -31.02376" scale="0.1 0.1 0.1" rotation=""></a-entity>
+</a-entity>
+
+
+<!-- Main Gate -->
+<a-entity id="Gate" gltf-model="asset/door/gate/scene.gltf" position="33.25558 -0.328 112.51656" scale="5 3.5 3"></a-entity>
+
+
+<!-- Main Door -->
+<a-entity id="Main Door">
+  <a-entity id="door rotation" position="36 0.05342 65.48894" rotation="0 0 0" door>
+    <a-entity gltf-model="/asset/door/scene.gltf" position="-2.7 0 0" rotation="0 90 0" id="door" class="intersectable" scale="4 5 4.644" sound="src: sound/dorm-door-opening-6038.mp3; on: click">
+    </a-entity>
+  </a-entity>
+</a-entity>
+
+
+<!-- Side Door -->
+<a-entity id="Side Door">
+  <a-entity id="door rotation" position="-46.8 9.98099 34.76417" rotation="" door="" animation="property: rotation; to: 0 0 0">
+    <a-entity id="Side Door" geometry="width: 8; height: 20; depth: 0.05" material="color: aqua; transparent: true; opacity: 0.3" position="0 -0.05082 3.2" rotation="0 90 0" class="intersectable"></a-entity>
+  </a-entity>
+  <a-entity id="door rotation-2" position="-46.8 9.93525 49.1049" rotation="" doorinvert="" animation="property: rotation; to: 0 0 0">
+    <a-entity id="Side Door" geometry="width: 8.3; height: 20; depth: 0.05" material="color: aqua; transparent: true; opacity: 0.3" position="0 -0.02314 -2.84963" rotation="0 90 0" class="intersectable"></a-entity>
+  </a-entity>
+  </a-entity>
+
+
+
+<!-- Ground -->
+<a-entity id="Ground Area">
+  <a-entity id="Ground right" static-body="" geometry="height: 10; width: 205; depth: 3" position="96.21128 4.38139 10.80827" rotation="0 90 0" material="src: texture/wall-glass.jpg; repeat: 15 1; roughness: 1"  shadow="cast: true; receive: true"></a-entity>
+  <a-entity id="Ground left" static-body="" geometry="height: 10; width: 205; depth: 3" position="-108.09086 4.38139 10.80827" rotation="0 90 0" material="src: texture/wall-glass.jpg; repeat: 15 1; roughness: 1"  shadow="cast: true; receive: true"></a-entity>
+  <a-entity id="Ground back" static-body="" geometry="height: 10; width: 205; depth: 3" position="-5.99119 4.38139 -90.62094" rotation="" material="src: texture/wall-glass.jpg; repeat: 15 1; roughness: 1"  shadow="cast: true; receive: true"></a-entity>
+  <a-entity id="Ground front1" static-body="" geometry="height: 10; width: 125; depth: 3" position="-44.34091 4.38139 111.95564" rotation="" material="src: texture/wall-glass.jpg; repeat: 12 1; roughness: 1" shadow=""></a-entity>
+  <a-entity id="Ground front2" static-body="" geometry="height: 10; width: 45; depth: 3" position="72.46946 4.38139 111.95564" rotation="" material="src: texture/wall-glass.jpg; repeat: 6 1; roughness: 1" shadow=""></a-entity>
+  <a-entity id="Gravel" static-body="" geometry="depth: 42.86; height: 0.1; width: 123" position="33.3 -0.321 89.012" material="src: texture/gravel.jpg; repeat: 10 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
+  <a-entity id="Path" static-body="" geometry="depth: 42.86; height: 1; width: 10.5" position="33.3 -0.32066 89.012" material="src: texture/rock.jpg; repeat: 1 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
+
+</a-entity>
+<!-- Dog House -->
+<a-entity id="Dog House">
+  <a-box position="80 2.76726 95" rotation="" color="#76453B" material="" geometry="depth: 6; height: 6; width: 6"></a-box>
+  <a-cone segments-radial="4" height="2.5" position="80 8.88915 95" color="red" radius-bottom="2" material="" geometry="" rotation="0 45 0" scale="2.5 2.5 2.5"></a-cone>
+</a-entity>
+
+  <!-- Floor -->
+  <a-entity id="Floor" static-body="" geometry="depth: 80; height: 0.2; width: 99" position="-2.2539 0.1 15.05396" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
+  <a-entity id="FloorBedRoom" static-body="" geometry="depth: 30; height: 0.2; width: 52" position="-62.70868 0.1 -8.42928" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
+
+  <!-- Celling -->
+  <a-entity id="Celling" static-body="" geometry="depth: 80; height: 0.2; width: 99" position="-2.254 20 15.054" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
+  <a-entity id="CellingBedRoom" static-body="" geometry="depth: 30; height: 0.2; width: 52" position="-62.70868 20 -8.42928" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
+
+  <!-- Walls  -->
+  <a-entity id="Walls">
+    <a-entity id="wall back" static-body="" geometry="height: 25; width: 120" position="-18.326 7.5 -34.79698" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true" shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="wall front" static-body="" geometry="height: 25; width: 77.5" position="-8.26446 7.5 65.00215" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="wall door" static-body="" geometry="height: 25; width: 15" position="-46.8036 7.5 57.92633" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="wall door-2" static-body="" geometry="height: 25; width: 60" position="-46.8036 7.5 4.00333" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+    <a-entity id="wall main door right" static-body="" geometry="height: 25; width: 6.5" position="39.43093 7.5 65.00215" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true" shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="wall main door above" static-body="" geometry="height: 7.33; width: 6" position="33.29522 16.32324 65.00215" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+  </a-entity>
+
+  <!-- Bedroom -->
+  <a-entity id="Bedroom">
+    <a-entity static-body="" geometry="height: 25; width: 33" position="-78.82743 7.5 0.94692" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; color: #526eff"  id="Bedroom wall left"></a-entity>
+    <a-entity static-body="" geometry="height: 25; width: 33" position="-62.81186 7.5 17.89555" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff" ></a-entity>
+  </a-entity>  
+
+  <!-- Kitchen -->
+  <a-entity id="Kitchen">
+    <a-entity id="Kitchen_length" static-body="" geometry="height: 5; width: 35; depth: 3" position="24.174 2.3623 12.11393" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+    <a-entity id="Kitchen_width" static-body="" geometry="height: 25; width: 40" position="-1.974 7.5 -14.332" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow="cast: true; receive: true"></a-entity>
+  </a-entity>
+
+  <!-- Window -->
+  <a-entity id="Window">
+    <a-entity id="Glass Kitchen" geometry="width: 6.61; height: 7.38; depth: 0.05" material="color: aqua; transparent: true; opacity: 0.3" position="42.247 9.022 -8.7919" rotation="0 90 0"></a-entity>
+    <a-entity id="wall left Kitchen" static-body="" geometry="height: 25; width: 23" position="42.181 7.5 -23.49507" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+    <a-entity id="Under glass Kitchen" static-body="" geometry="height: 6; width: 6.64" position="42.181 2.50929 -8.78888" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
+    <a-entity id="Above glass Kitchen" static-body="" geometry="height: 7.28; width: 6.64" position="42.181 16.39341 -8.78888" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
+    <a-entity id="Wall right Kitchen" static-body="" geometry="height: 25; width: 26.13" position="42.181 7.5 7.59161" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
+    <a-entity id="Glass Foyer" geometry="width: 5; height: 6; depth: 0.05" material="color: aqua; transparent: true; opacity: 0.3" position="42.247 9.022 51.19467" rotation="0 90 0"></a-entity>
+    <a-entity id="Wall Foyer left" static-body="" geometry="height: 25; width: 28.9" position="42.181 7.5 34.24628" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" ></a-entity>
+    <a-entity id="wall Foyer right" static-body="" geometry="height: 25; width: 11" position="42.181 7.5 59.16539" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="Under Foyer" static-body="" geometry="height: 6; width: 5" position="42.181 2.50929 51.19467" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
+  </a-entity>
+
+  <!-- TV -->
+  <a-box id="TV" position="-15.372 12.59588 64.447" depth="0.05" height="2" width="3" color="#555" material="" geometry="depth: 0.1; height: 5; width: 8" scale="2.5 2 2">
+    <a-plane id="monitor" position="0 0 -0.08748" height="1.8" width="2.8" material="shader: flat" geometry="height: 4.66; width: 7.69" rotation="0 180 0" src="#tv-video" loop="true" class="intersectable" toggle-video=""></a-plane>
+</a-box>
+
+    </a-scene>
+  </body>
+</html>

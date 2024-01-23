@@ -1,0 +1,11 @@
+Model Information:
+* title:	Modern Light Switches
+* source:	https://sketchfab.com/3d-models/modern-light-switches-1bfdc602ed2542ee88dddde857649508
+* author:	Mark Blosser (https://sketchfab.com/mjblosser)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Modern Light Switches" (https://sketchfab.com/3d-models/modern-light-switches-1bfdc602ed2542ee88dddde857649508) by Mark Blosser (https://sketchfab.com/mjblosser) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

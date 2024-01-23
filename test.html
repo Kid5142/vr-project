@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Opening Door on Click</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <!-- Environment -->
+<a-entity id="environment" environment="preset: forest; fog: 10; seed: 343; playArea: 10; groundColor: green; dressingAmount: 5; ground: flat; dressingScale: 2; lighting: none" visible=""><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #92dacf; intensity: 0.6; groundColor: green" visible=""></a-entity><a-entity class="environment" position="-1.2 0.88 -0.55" light="intensity: 0.6; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.18" shadow="cast: false; receive: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: [object Object]; bottomColor: [object Object]" visible="" geometry=""></a-sky><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #92dacf; intensity: 0.6; groundColor: green" visible="false"></a-entity><a-entity class="environment" position="-1.2 0.88 -0.55" light="intensity: 0.6; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible="false"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.18" shadow="cast: false; receive: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: [object Object]; bottomColor: [object Object]" visible="" geometry=""></a-sky></a-entity>
+<a-entity door-toggle class="intersectable" position="-15 2.5 8" rotation="0 0 0">
+    <a-entity geometry="primitive: box; depth: 3; height: 5; width: 0.1" material="color: brown" position="0 0 -1.5"></a-entity>
+    <a-entity geometry="primitive: sphere; radius: 0.25" material="color: yellow" position="0 0 -2.5"></a-entity>
+</a-entity>
+       <!-- Camera -->
+    <a-entity position="0 0 0">
+        <a-camera universal-controls>
+            <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
+                      radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
+        </a-camera>
+    </a-entity>
+    </a-camera>
+  </a-entity>
+      <script>
+        AFRAME.registerComponent("door-toggle", {
+    init: function() {
+        var open = false;
+        var self = this.el;
+
+        self.addEventListener("click", function(evt) {
+            if (open) {
+                open = false;
+                self.setAttribute("rotation", "0 0 0");
+            } else {
+                open = true;
+                self.setAttribute("rotation", "0 90 0");
+            }
+        });
+    }
+});
+      </script>
+    </a-scene>
+  </body>
+</html>

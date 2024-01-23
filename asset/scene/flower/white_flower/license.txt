@@ -1,0 +1,11 @@
+Model Information:
+* title:	white flower
+* source:	https://sketchfab.com/3d-models/white-flower-9e025b18a39741a4a38b197cee3cdcac
+* author:	tojamerlin (https://sketchfab.com/tojamerlin)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "white flower" (https://sketchfab.com/3d-models/white-flower-9e025b18a39741a4a38b197cee3cdcac) by tojamerlin (https://sketchfab.com/tojamerlin) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

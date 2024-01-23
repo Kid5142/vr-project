@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low-Poly Glass Table
+* source:	https://sketchfab.com/3d-models/low-poly-glass-table-6acac6d9201e448b92dff859b6f63aad
+* author:	NoobiePie (https://sketchfab.com/NoobiePie)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low-Poly Glass Table" (https://sketchfab.com/3d-models/low-poly-glass-table-6acac6d9201e448b92dff859b6f63aad) by NoobiePie (https://sketchfab.com/NoobiePie) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Gate
+* source:	https://sketchfab.com/3d-models/gate-ef97e30879194b7ab1901110c9756b87
+* author:	imperishability (https://sketchfab.com/imperishability)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Gate" (https://sketchfab.com/3d-models/gate-ef97e30879194b7ab1901110c9756b87) by imperishability (https://sketchfab.com/imperishability) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
