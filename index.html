@@ -89,7 +89,8 @@
   <a-entity id="car" gltf-model="/asset/car2/scene.gltf" position="63.0283 -0.5 25.56265" scale="10 10 10"></a-entity>
   <a-entity id="dog"  gltf-model="/asset/dog/scene.gltf" position="64.32671 3.60653 89.14872" scale="4 4 4" rotation="0 -90 0"></a-entity>
   <a-entity id="Sofa" gltf-model="#sofa" position="-14.53819 3.42104 28.23459" scale="10 10 10"></a-entity>
-  <a-entity id="Flower" gltf-model="#flower" position="25.77989 -0.32793 69.54256" scale=""></a-entity>
+  <a-entity id="Flower" gltf-model="asset/scene/flower/garden_flower_-_vegetation/scene.gltf" position="25.77989 -0.32793 68.60032" scale=""></a-entity>
+  <a-entity id="Flower1" gltf-model="asset/scene/flower/garden_flower_-_vegetation/scene.gltf" position="41.31851 -0.32793 68.58765" scale="" rotation="0 45 0"></a-entity>
   <a-entity id="lightSwitch" gltf-model="asset/light/modern_light_switches/scene.gltf" position="27.797 7.533 64.397" scale="4 4 4" rotation="0 180 0" class="intersectable" switch-light="" shadow=""></a-entity>
   <a-entity id="glass-table" gltf-model="asset/item/table/glass_table/scene.gltf" position="-15.15829 -0.328 44.38333" scale="5 3.5 5" rotation="0 90 0"></a-entity>
   <a-entity id="dinning-table" gltf-model="asset/item/table/dining table/scene.gltf" position="19.6524 -0.48765 -8.55899" scale="0.008 0.008 0.008" rotation="0 90 0" shadow=""></a-entity>
@@ -146,9 +147,9 @@
   <a-entity id="Ground back" static-body="" geometry="height: 10; width: 205; depth: 3" position="-5.99119 4.38139 -90.62094" rotation="" material="src: texture/wall-glass.jpg; repeat: 15 1; roughness: 1"  shadow="cast: true; receive: true"></a-entity>
   <a-entity id="Ground front1" static-body="" geometry="height: 10; width: 125; depth: 3" position="-44.34091 4.38139 111.95564" rotation="" material="src: texture/wall-glass.jpg; repeat: 12 1; roughness: 1" shadow=""></a-entity>
   <a-entity id="Ground front2" static-body="" geometry="height: 10; width: 45; depth: 3" position="72.46946 4.38139 111.95564" rotation="" material="src: texture/wall-glass.jpg; repeat: 6 1; roughness: 1" shadow=""></a-entity>
-  <a-entity id="Gravel" static-body="" geometry="depth: 42.86; height: 0.1; width: 123" position="33.3 -0.321 89.012" material="src: texture/gravel.jpg; repeat: 10 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
+  <a-entity id="Gravel" static-body="" geometry="depth: 42.86; height: 0.1; width: 133" position="28.91218 -0.321 89.012" material="src: texture/gravel.jpg; repeat: 10 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
   <a-entity id="Path" static-body="" geometry="depth: 42.86; height: 1; width: 10.5" position="33.3 -0.32066 89.012" material="src: texture/rock.jpg; repeat: 1 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
-
+  <a-entity id="Path-2" static-body="" geometry="depth: 42.86; width: 10.5" position="-42.10339 -0.321 89.012" material="src: texture/rock.jpg; repeat: 1 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
 </a-entity>
 <!-- Garage -->
 <a-entity id="Garage">
@@ -187,13 +188,22 @@
     <a-entity id="wall" static-body="" geometry="height: 25; width: 13" position="-78.82743 7.5 -28.59781" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; color: #526eff" id="Bedroom wall left-2"></a-entity>
     <a-entity id="wall-2" static-body="" geometry="height: 6; width: 7.35" position="-78.82743 2.89225 -18.77565" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
     <a-entity id="wall-3" static-body="" geometry="height: 6; width: 7.35" position="-78.82743 17.01552 -18.77565" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
-  </a-entity>  
+    <a-entity id="wall-door-2" static-body="" geometry="height: 25; width: 2.5" position="-46.804 7.5 -33.01651" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+    <a-entity id="wall-door-3" static-body="" geometry="height: 7; width: 6" position="-46.804 16.38379 -28.8977" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+    <a-entity id="door rotation" position="-47.0196 0.23092 -26.1" rotation="" doorinvert="" animation="property: rotation; to: 0 0 0">
+      <a-entity gltf-model="/asset/door/scene.gltf" position="0 0 -2.75" rotation="" id="door" class="intersectable" scale="4 5 4.644" sound="src: sound/dorm-door-opening-6038.mp3; on: click">
+      </a-entity>
+    </a-entity>
+  </a-entity>
 
+  <!-- WC -->
+  <!-- <a-entity id="wall" static-body="" geometry="height: 25; width: 35" position="-24.19714 7.5 -16.88573" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity> -->
+  
   <!-- Kitchen -->
   <a-entity id="Kitchen">
     <a-entity id="Kitchen_table0" static-body="" geometry="height: 5; width: 35; depth: 3" position="24.174 2.3623 12.11393" rotation="" material="src: texture/granite-stone-white.jpg ; roughness: 1; repeat: 6 1;" shadow=""></a-entity>
     <a-entity id="Kitchen_table1" static-body="" geometry="depth: 4; height: 0.4; width: 35" position="24.10957 5.01079 12.00746" material="src: texture/grindstone-texture.jpg; repeat: 5 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
-    <a-entity id="Kitchen_width" static-body="" geometry="height: 25; width: 40" position="-1.974 7.5 -14.332" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="Kitchen_width" static-body="" geometry="height: 25; width: 35" position="-1.974 7.5 -16.88573" rotation="0 90 0" material="roughness: 1; color: #526eff" shadow=""></a-entity>
   </a-entity>
 
   <!-- Window -->
