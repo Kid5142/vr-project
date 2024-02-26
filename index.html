@@ -154,8 +154,8 @@
 <!-- Garage -->
 <a-entity id="Garage">
 <a-entity id="Celling-Garage" static-body="" geometry="depth: 40; height: 0.2; width: 50" position="63.81753 20 20.68904" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
-<a-entity id="Wall Right Garage" static-body="" geometry="height: 25; width: 50.52; depth: 2" position="84.45515 7.5 20.62592" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
-<a-entity id="Wall Behind Garage" static-body="" geometry="height: 25; width: 43; depth: 2" position="63.70994 7.5 -3.43784" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
+<a-entity id="Wall Right Garage" static-body="" geometry="height: 25; width: 50.52; depth: 2" position="84.45515 7.5 20.62592" rotation="0 90 0" material="roughness: 1; repeat: 6 1; src: texture/wall/wall-wood.jpg"></a-entity>
+<a-entity id="Wall Behind Garage" static-body="" geometry="height: 25; width: 43; depth: 2" position="63.70994 7.5 -3.43784" rotation="" material="roughness: 1; repeat: 6 1; src: texture/wall/wall-wood.jpg"></a-entity>
 </a-entity>
 <!-- Dog House -->
 <a-entity id="Dog House">
@@ -164,32 +164,39 @@
 </a-entity>
 
   <!-- Floor -->
-  <a-entity id="Floor" static-body="" geometry="depth: 80; height: 0.2; width: 99" position="-2.2539 0.1 15.05396" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
+  <a-entity id="Floor" static-body="" geometry="depth: 80; height: 0.2; width: 99" position="-2.2539 0.1 15.05396" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 1 1" rotation="0 90 0" scale="1 1 1.1"></a-entity>
   <a-entity id="FloorBedRoom" static-body="" geometry="depth: 30; height: 0.2; width: 52" position="-62.70868 0.1 -8.42928" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
 
   <!-- Celling -->
-  <a-entity id="Celling" static-body="" geometry="depth: 80; height: 0.2; width: 99" position="-2.254 20 15.054" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
-  <a-entity id="CellingBedRoom" static-body="" geometry="depth: 30; height: 0.2; width: 52" position="-62.70868 20 -8.42928" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
+  <a-entity id="Celling" static-body="" geometry="depth: 100; height: 2; width: 115" position="-2.254 20.65019 15.054" material="src:texture/floor/cel.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
+  <a-entity id="frame" position="0 0 0">
+    <a-box material="color:black" geometry="depth: 0.31; height: 0.2; width: 40" position="-15.30584 18.90949 29.40786"></a-box>
+    <a-box material="color:black" geometry="depth: 0.31; height: 0.2; width: 40" position="-15.30584 18.90949 54.68554"></a-box>
+
+    <a-box material="color: black" geometry="depth: 0.31; height: 0.2; width: 25.25" rotation="0 90 0" position="4.93979 18.90949 42.05234"></a-box>
+    <a-box material="color: black" geometry="depth: 0.31; height: 0.2; width: 25.25" rotation="0 90 0" position="-35.15476 18.90949 42.05234"></a-box>
+  </a-entity>
+  <a-entity id="CellingBedRoom" static-body="" geometry="depth: 25; height: 2; width: 66" position="-70.94461 20.65 -9.34985" material="src: texture/floor/floor.jpg; shader: flat; side: double; repeat: 5 5" rotation="0 90 0" scale="1 1 1.1"></a-entity>
 
   <!-- Walls  -->
   <a-entity id="Walls">
-    <a-entity id="wall back" static-body="" geometry="height: 25; width: 120" position="-18.326 7.5 -34.79698" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
-    <a-entity id="wall front" static-body="" geometry="height: 25; width: 77.5" position="-8.26446 7.5 65.00215" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
-    <a-entity id="wall door" static-body="" geometry="height: 25; width: 15" position="-46.8036 7.5 57.92633" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
-    <a-entity id="wall door-2" static-body="" geometry="height: 25; width: 60" position="-46.8036 7.5 4.00333" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
-    <a-entity id="wall main door right" static-body="" geometry="height: 25; width: 6.5" position="39.43093 7.5 65.00215" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
-    <a-entity id="wall main door above" static-body="" geometry="height: 7.33; width: 6" position="33.29522 16.32324 65.00215" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+    <a-entity id="wall back" static-body="" geometry="height: 25; width: 120" position="-18.326 7.5 -34.79698" rotation="" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"  shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="wall front" static-body="" geometry="height: 25; width: 77.5" position="-8.26446 7.5 65.00215" rotation="" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"  shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="wall door" static-body="" geometry="height: 25; width: 15" position="-46.8036 7.5 57.92633" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"  shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="wall door-2" static-body="" geometry="height: 25; width: 60" position="-46.8036 7.5 4.00333" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" shadow=""></a-entity>
+    <a-entity id="wall main door right" static-body="" geometry="height: 25; width: 6.5" position="39.43093 7.5 65.00215" rotation="" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"  shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="wall main door above" static-body="" geometry="height: 7.33; width: 6" position="33.29522 16.32324 65.00215" rotation="" material="roughness: 1; repeat: 0.5 0.5; src: texture/wall/wall-wood.jpg" shadow=""></a-entity>
   </a-entity>
 
   <!-- Bedroom -->
   <a-entity id="Bedroom">
-    <a-entity static-body="" geometry="height: 25; width: 33" position="-78.82743 7.5 0.94692" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; color: #526eff"  id="Bedroom wall left"></a-entity>
-    <a-entity id="wall" static-body="" geometry="height: 25; width: 33" position="-62.81186 7.5 17.89555" rotation="" material="roughness: 1; repeat: 6 1; color: #526eff" ></a-entity>
-    <a-entity id="wall" static-body="" geometry="height: 25; width: 13" position="-78.82743 7.5 -28.59781" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; color: #526eff" id="Bedroom wall left-2"></a-entity>
-    <a-entity id="wall-2" static-body="" geometry="height: 6; width: 7.35" position="-78.82743 2.89225 -18.77565" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
-    <a-entity id="wall-3" static-body="" geometry="height: 6; width: 7.35" position="-78.82743 17.01552 -18.77565" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
-    <a-entity id="wall-door-2" static-body="" geometry="height: 25; width: 2.5" position="-46.804 7.5 -33.01651" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
-    <a-entity id="wall-door-3" static-body="" geometry="height: 7; width: 6" position="-46.804 16.38379 -28.8977" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+    <a-entity static-body="" geometry="height: 25; width: 33" position="-78.82743 7.5 0.94692" rotation="0 -90 0" material="roughness: 1; repeat: 6 1; src: texture/wall/wall-wood.jpg"  id="Bedroom wall left"></a-entity>
+    <a-entity id="wall" static-body="" geometry="height: 25; width: 33" position="-62.81186 7.5 17.89555" rotation="" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" ></a-entity>
+    <a-entity id="wall" static-body="" geometry="height: 25; width: 13" position="-78.82743 7.5 -28.59781" rotation="0 -90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" id="Bedroom wall left-2"></a-entity>
+    <a-entity id="wall-2" static-body="" geometry="height: 6; width: 7.35" position="-78.82743 2.89225 -18.77565" rotation="0 -90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"></a-entity>
+    <a-entity id="wall-3" static-body="" geometry="height: 6; width: 7.35" position="-78.82743 17.01552 -18.77565" rotation="0 -90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"></a-entity>
+    <a-entity id="wall-door-2" static-body="" geometry="height: 25; width: 2.5" position="-46.804 7.5 -33.01651" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" shadow=""></a-entity>
+    <a-entity id="wall-door-3" static-body="" geometry="height: 7; width: 6" position="-46.804 16.38379 -28.8977" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" shadow=""></a-entity>
     <a-entity id="door rotation" position="-47.0196 0.23092 -26.1" rotation="" doorinvert="" animation="property: rotation; to: 0 0 0">
       <a-entity gltf-model="/asset/door/scene.gltf" position="0 0 -2.75" rotation="" id="door" class="intersectable" scale="4 5 4.644" sound="src: sound/dorm-door-opening-6038.mp3; on: click">
       </a-entity>
@@ -197,27 +204,27 @@
   </a-entity>
 
   <!-- WC -->
-  <!-- <a-entity id="wall" static-body="" geometry="height: 25; width: 35" position="-24.19714 7.5 -16.88573" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity> -->
+  <!-- <a-entity id="wall" static-body="" geometry="height: 25; width: 35" position="-24.19714 7.5 -16.88573" rotation="0 90 0" material="roughness: 1; repeat: 6 1; src: texture/wall/wall-wood.jpg" shadow=""></a-entity> -->
   
   <!-- Kitchen -->
   <a-entity id="Kitchen">
     <a-entity id="Kitchen_table0" static-body="" geometry="height: 5; width: 35; depth: 3" position="24.174 2.3623 12.11393" rotation="" material="src: texture/granite-stone-white.jpg ; roughness: 1; repeat: 6 1;" shadow=""></a-entity>
     <a-entity id="Kitchen_table1" static-body="" geometry="depth: 4; height: 0.4; width: 35" position="24.10957 5.01079 12.00746" material="src: texture/grindstone-texture.jpg; repeat: 5 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
-    <a-entity id="Kitchen_width" static-body="" geometry="height: 25; width: 35" position="-1.974 7.5 -16.88573" rotation="0 90 0" material="roughness: 1; color: #526eff" shadow=""></a-entity>
+    <a-entity id="Kitchen_width" static-body="" geometry="height: 25; width: 35" position="-1.974 7.5 -16.88573" rotation="0 90 0" material="roughness: 1; src: texture/wall/wall-wood.jpg" shadow=""></a-entity>
   </a-entity>
 
   <!-- Window -->
   <a-entity id="Window">
     <a-entity id="Glass Kitchen" geometry="width: 6.61; height: 7.38; depth: 0.05" material="color: aqua; transparent: true; opacity: 0.3" position="42.247 9.022 -8.7919" rotation="0 90 0"></a-entity>
-    <a-entity id="wall left Kitchen" static-body="" geometry="height: 25; width: 23" position="42.181 7.5 -23.49507" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
-    <a-entity id="Under glass Kitchen" static-body="" geometry="height: 6; width: 6.64" position="42.181 2.50929 -8.78888" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
-    <a-entity id="Above glass Kitchen" static-body="" geometry="height: 7.28; width: 6.64" position="42.181 16.39341 -8.78888" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
-    <a-entity id="Wall right Kitchen" static-body="" geometry="height: 25; width: 26.13" position="42.181 7.5 7.59161" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"></a-entity>
+    <a-entity id="wall left Kitchen" static-body="" geometry="height: 25; width: 23" position="42.181 7.5 -23.49507" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" shadow=""></a-entity>
+    <a-entity id="Under glass Kitchen" static-body="" geometry="height: 6; width: 6.64" position="42.181 2.50929 -8.78888" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"></a-entity>
+    <a-entity id="Above glass Kitchen" static-body="" geometry="height: 7.28; width: 6.64" position="42.181 16.39341 -8.78888" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"></a-entity>
+    <a-entity id="Wall right Kitchen" static-body="" geometry="height: 25; width: 26.13" position="42.181 7.5 7.59161" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"></a-entity>
     <a-entity id="Glass Foyer" geometry="width: 5; height: 7.33; depth: 0.05" material="color: aqua; transparent: true; opacity: 0.3" position="42.247 9.022 51.19467" rotation="0 90 0"></a-entity>
-    <a-entity id="Wall Foyer left" static-body="" geometry="height: 25; width: 28.9" position="42.181 7.5 34.24628" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" ></a-entity>
-    <a-entity id="wall Foyer right" static-body="" geometry="height: 25; width: 11" position="42.181 7.5 59.16539" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff"  shadow="cast: true; receive: true"></a-entity>
-    <a-entity id="Under glass Foyer" static-body="" geometry="height: 6; width: 5.16" position="42.181 2.50929 51.14888" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
-    <a-entity id="Above glass Foyer" static-body="" geometry="height: 7.55; width: 5.16" position="42.181 16.25499 51.14888" rotation="0 90 0" material="roughness: 1; repeat: 6 1; color: #526eff" shadow=""></a-entity>
+    <a-entity id="Wall Foyer left" static-body="" geometry="height: 25; width: 28.9" position="42.181 7.5 34.24628" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" ></a-entity>
+    <a-entity id="wall Foyer right" static-body="" geometry="height: 25; width: 11" position="42.181 7.5 59.16539" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg"  shadow="cast: true; receive: true"></a-entity>
+    <a-entity id="Under glass Foyer" static-body="" geometry="height: 6; width: 5.16" position="42.181 2.50929 51.14888" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" shadow=""></a-entity>
+    <a-entity id="Above glass Foyer" static-body="" geometry="height: 7.55; width: 5.16" position="42.181 16.25499 51.14888" rotation="0 90 0" material="roughness: 1; repeat: 1 1; src: texture/wall/wall-wood.jpg" shadow=""></a-entity>
   </a-entity>
 
   <!-- TV -->
@@ -227,7 +234,12 @@
 <a-box id="TV-bedroom" position="-64.86613 13.19409 -34.17499" depth="0.05" height="2" width="3" color="#555" material="" geometry="depth: 0.1; height: 5; width: 8" scale="2.5 2 2" rotation="0 180 0">
   <a-plane id="monitor" position="0 0 -0.08748" height="1.8" width="2.8" material="shader: flat" geometry="height: 4.66; width: 7.69" rotation="0 180 0" src="#tv-video" loop="true" class="intersectable" toggle-video=""></a-plane>
 </a-box>
-
+<!--be ca-->
+<a-entity id="fish" position="14.998 5.044 10.72524" scale="1.2 1.2 1.5">
+  <a-box src="./asset/video/fish.mov" position="-3.87845 2.49338 1.07046" rotation="0 90.10964539801972 0" color="#4CC3D9" material="" geometry="" scale="1.65613 1.83041 4.95918"></a-box>
+  <a-box position="-3.87191 0.6562 1.07774" rotation="0 90 0" color="black" scale="1.65613 1.83041 4.95918" material="" geometry=""></a-box>
+  <a-box position="-3.87191 3.61153 1.07774" rotation="0 90 0" color="black" scale="1.65613 0.47233 4.95918" material="" geometry=""></a-box>
+  </a-entity>
     </a-scene>
   </body>
 </html>
