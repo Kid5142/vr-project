@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dog House Free
+* source:	https://sketchfab.com/3d-models/dog-house-free-fc9e3897b3564f36be62748aaf46adb5
+* author:	donnichols (https://sketchfab.com/donnichols)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dog House Free" (https://sketchfab.com/3d-models/dog-house-free-fc9e3897b3564f36be62748aaf46adb5) by donnichols (https://sketchfab.com/donnichols) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
