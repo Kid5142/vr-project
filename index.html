@@ -7,7 +7,7 @@
     <a-scene >
       <!-- Camera -->
   <a-entity id="Camera" position="35 5.5 77">
-    <a-camera universal-controls wasd-controls="acceleration: 150">
+    <a-camera universal-controls wasd-controls="acceleration: 100">
       <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.008;
                       radiusInner: 0.005; segmentsTheta: 32" material="color: black; shader: flat" position="0 0 -0.75"></a-entity>
     </a-camera>
@@ -78,6 +78,26 @@
       });
     }
   });
+
+  AFRAME.registerComponent('toggle-sound', {
+    schema: {
+      src: {type: 'string'}
+    },
+
+    init: function () {
+      var data = this.data;
+      var el = this.el;
+
+      el.addEventListener('click', function () {
+        var sound = el.components.sound;
+        if (!sound.isPlaying) {
+          sound.playSound();
+        } else {
+          sound.stopSound();
+        }
+      });
+    }
+  });
        
       </script>
 
@@ -90,7 +110,7 @@
   <a-entity id="lightSwitch" gltf-model="asset/light/modern_light_switches/scene.gltf" position="27.797 7.533 64.397" scale="4 4 4" rotation="0 180 0" class="intersectable" switch-light="" shadow=""></a-entity>
   <a-entity id="glass-table" gltf-model="asset/item/table/glass_table/scene.gltf" position="-16.43261 -0.328 43.74077" scale="5 3.5 5" rotation="0 90 0"></a-entity>
   <a-entity id="dinning-table" gltf-model="asset/item/table/dining table/scene.gltf" position="19.6524 -0.48765 -8.55899" scale="0.008 0.008 0.008" rotation="0 90 0" shadow=""></a-entity>
-  <a-entity id="gramophone" gltf-model="asset/item/gramophone/scene.gltf" position="37.00743 10.14372 12.05066" scale="5 5 5" rotation="" shadow="" class="intersectable" sound="src: sound/HowlsMovingCastleOSTThemeSong.mp3; on: click; volume: 5"></a-entity>
+  <a-entity id="gramophone" gltf-model="asset/item/gramophone/scene.gltf" position="37.00743 10.14372 12.05066" scale="5 5 5" rotation="" shadow="" class="intersectable" sound="src: sound/HowlsMovingCastleOSTThemeSong.mp3; volume: 5" toggle-sound></a-entity>
   <a-entity id="kitchen-cabinet" gltf-model="asset/item/kitchen_cabinet_1/scene.gltf" position="40.07915 0.23531 -34.43751" scale="130 75 90" rotation="0 -90 0" shadow=""></a-entity>
   <a-entity id="fluorescent" gltf-model="asset/light/fluorescent_lamp/scene.gltf" position="42.9083 18.4595 -12.16554" scale="0.2 0.2 0.2" rotation="0 0 90"></a-entity>
   <a-entity id="Chandeliers" gltf-model="asset/light/chandelier_black/scene.gltf" position="-14.974 14.51638 42.85825" scale="0.05 0.05 0.05">
@@ -116,8 +136,9 @@
   <a-entity id="wallLemp6" gltf-model="#wallLemp" position="-26.41838 7.68622 65.95438" scale="2 2 2">
     <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
   </a-entity>
-  <a-entity id="wallLemp7" gltf-model="#wallLemp" position="-39.41838 7.68622 65.95438" scale="2 2 2">
-    <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
+  <a-entity id="wallLemp7" gltf-model="asset/light/wall_lamp/scene.gltf" position="-39.41838 7.68622 65.95438" scale="2 2 2">
+    <a-entity id="light" light="type: point; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 1.38881"></a-entity>
+  </a-entity>
   </a-entity>
   <a-entity id="Bed" gltf-model="asset/item/bed/scene.gltf" position="-63.24779 -0.61381 5.44552" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
   <a-entity id="Cabinet" gltf-model="asset/item/bedside_andrea/scene.gltf" position="-75.83118 0.00984 13.68432" scale="0.1 0.1 0.1" rotation=""></a-entity>
