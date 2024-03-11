@@ -1,0 +1,11 @@
+Model Information:
+* title:	Outdoor table
+* source:	https://sketchfab.com/3d-models/outdoor-table-6b0a3a894a664e3d88520ccd905cfd40
+* author:	jennybria (https://sketchfab.com/jennybria)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Outdoor table" (https://sketchfab.com/3d-models/outdoor-table-6b0a3a894a664e3d88520ccd905cfd40) by jennybria (https://sketchfab.com/jennybria) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

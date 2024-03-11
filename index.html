@@ -18,7 +18,6 @@
       <!-- **************************** Assets **************************** -->
       <a-assets>
         <a-asset-item id="wallLemp" src="asset/light/wall_lamp/scene.gltf"></a-asset-item>
-        <a-asset-item id="flower" src="asset/scene/flower/garden_flower_-_vegetation/scene.gltf"></a-asset-item>
         <a-asset-item id="lightSwitch" src="asset/light/modern_light_switches/scene.gltf" ></a-asset-item>
         <!-- Video -->
         <video id="tv-video" src="asset/video/Dj Kantik - Teriyaki Boyz - Tokyo Drift & Sean Paul - Temperature (Remix)-(1080p).mp4"></video>
@@ -88,43 +87,47 @@
   <a-entity id="car" gltf-model="/asset/car2/scene.gltf" position="63.0283 -0.5 25.56265" scale="10 10 10"></a-entity>
   <a-entity id="dog" gltf-model="/asset/dog/scene.gltf" position="72.89256 3.607 101.71199" scale="4 4 4" rotation="0 -90 0"></a-entity>
   <a-entity id="dog house" gltf-model="asset/dog/dog_house_free/scene.gltf" position="84.04039 -0.0416 101.71417" scale="0.15 0.15 0.15" rotation="0 -90 0"></a-entity>
-  <a-entity id="Flower" gltf-model="asset/scene/flower/garden_flower_-_vegetation/scene.gltf" position="25.77989 -0.32793 68.60032" scale=""></a-entity>
-  <a-entity id="Flower1" gltf-model="asset/scene/flower/garden_flower_-_vegetation/scene.gltf" position="41.31851 -0.32793 68.58765" scale="" rotation="0 45 0"></a-entity>
   <a-entity id="lightSwitch" gltf-model="asset/light/modern_light_switches/scene.gltf" position="27.797 7.533 64.397" scale="4 4 4" rotation="0 180 0" class="intersectable" switch-light="" shadow=""></a-entity>
   <a-entity id="glass-table" gltf-model="asset/item/table/glass_table/scene.gltf" position="-16.43261 -0.328 43.74077" scale="5 3.5 5" rotation="0 90 0"></a-entity>
   <a-entity id="dinning-table" gltf-model="asset/item/table/dining table/scene.gltf" position="19.6524 -0.48765 -8.55899" scale="0.008 0.008 0.008" rotation="0 90 0" shadow=""></a-entity>
-  <a-entity id="kitchen-table" gltf-model="asset/item/table/kichen_table/scene.gltf" position="41.27 5.202 -1.83187" scale="0.155 0.08 0.08" rotation="0 -90 0" shadow=""></a-entity>
-  <a-entity id="kitchen-table1" gltf-model="asset/item/table/kitchen_table1/scene.gltf" position="28.50362 0.169 -21.80337" scale="1.1 0.8 1.1" rotation="" shadow=""></a-entity>
+  <a-entity id="gramophone" gltf-model="asset/item/gramophone/scene.gltf" position="37.00743 10.14372 12.05066" scale="5 5 5" rotation="" shadow="" class="intersectable" sound="src: sound/HowlsMovingCastleOSTThemeSong.mp3; on: click; volume: 5"></a-entity>
+  <a-entity id="kitchen-cabinet" gltf-model="asset/item/kitchen_cabinet_1/scene.gltf" position="40.07915 0.23531 -34.43751" scale="130 75 90" rotation="0 -90 0" shadow=""></a-entity>
   <a-entity id="fluorescent" gltf-model="asset/light/fluorescent_lamp/scene.gltf" position="42.9083 18.4595 -12.16554" scale="0.2 0.2 0.2" rotation="0 0 90"></a-entity>
   <a-entity id="Chandeliers" gltf-model="asset/light/chandelier_black/scene.gltf" position="-14.974 14.51638 42.85825" scale="0.05 0.05 0.05">
     <a-entity id="light" light="type: point; decay: 0.5; distance: 70; color: #fff700; intensity: 0" position="0.77534 18.86631 1.56202" rotation="" scale="10 10 10"></a-entity>
   </a-entity>
- 
-  <a-entity id="light" position="-74.23018 7.62396 13.68539" rotation="" scale="2 2 2" light="type: point; distance: 30; color: #fff700"></a-entity>
   </a-entity>
   </a-entity>
   <a-entity id="wallLempRight" gltf-model="#wallLemp" position="38.58162 7.68622 65.95438" scale="2 2 2">
-    <a-entity id="light" light="type: point; decay: 0.5; distance: 15; color: #fff700" position="0.58226 1.51357 0.23067" scale="0.5 0.5 0.5"></a-entity>
+    <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" position="0.58226 1.51357 0.23067" scale="0.5 0.5 0.5"></a-entity>
   </a-entity>
   <a-entity id="wallLempLeft" gltf-model="#wallLemp" position="25.58162 7.68622 65.95438" scale="2 2 2">
-    <a-entity id="light" light="type: point; decay: 0.5; distance: 15; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
+    <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
   </a-entity>
   <a-entity id="wallLemp3" gltf-model="#wallLemp" position="12.58162 7.68622 65.95438" scale="2 2 2">
-    <a-entity id="light" light="type: point; decay: 0.5; distance: 15; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
+    <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
   </a-entity>
   <a-entity id="wallLemp4" gltf-model="#wallLemp" position="-0.41838 7.68622 65.95438" scale="2 2 2">
-    <a-entity id="light" light="type: point; decay: 0.5; distance: 15; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
+    <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
   </a-entity>
   <a-entity id="wallLemp5" gltf-model="#wallLemp" position="-13.41838 7.68622 65.95438" scale="2 2 2">
-    <a-entity id="light" light="type: point; decay: 0.5; distance: 15; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
+    <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
   </a-entity>
   <a-entity id="wallLemp6" gltf-model="#wallLemp" position="-26.41838 7.68622 65.95438" scale="2 2 2">
-    <a-entity id="light" light="type: point; decay: 0.5; distance: 15; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
+    <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
   </a-entity>
   <a-entity id="wallLemp7" gltf-model="#wallLemp" position="-39.41838 7.68622 65.95438" scale="2 2 2">
-    <a-entity id="light" light="type: point; decay: 0.5; distance: 15; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
+    <a-entity id="light" light="type: point; decay: 0.5; distance: 10; color: #fff700" scale="0.5 0.5 0.5" position="0.57321 1.44771 0.15551"></a-entity>
   </a-entity>
   <a-entity id="Bed" gltf-model="asset/item/bed/scene.gltf" position="-63.24779 -0.61381 5.44552" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
+  <a-entity id="Cabinet" gltf-model="asset/item/bedside_andrea/scene.gltf" position="-75.83118 0.00984 13.68432" scale="0.1 0.1 0.1" rotation=""></a-entity>
+  <a-entity id="Cabinet-2" gltf-model="asset/item/bedside_andrea/scene.gltf" position="-52.33048 0.00984 13.68432" scale="0.1 0.1 0.1" rotation=""></a-entity>
+  <a-entity id="Lamp" gltf-model="asset/light/bed_lamp/scene.gltf" position="-74.98962 5.32667 14.6099" scale="0.1 0.1 0.1" rotation="">
+    <a-entity id="light" position="0 30 0" rotation="" scale="2 2 2" light="type: point; distance: 10; color: #fff700"></a-entity>
+  </a-entity>
+  <a-entity id="Lamp-2" gltf-model="asset/light/bed_lamp/scene.gltf" position="-51.18005 5.327 14.61" scale="0.1 0.1 0.1" rotation="">
+    <a-entity id="light" position="0 30 0" rotation="" scale="2 2 2" light="type: point; distance: 10; color: #fff700"></a-entity>
+  </a-entity>
   <a-entity id="AirCondition" gltf-model="asset/item/Air Condition/air_condition/scene.gltf" position="-78.77564 15.82384 2.61133" scale="0.1 0.1 0.1" rotation="0 90 0"></a-entity>
   <a-entity id="Fridge" gltf-model="asset/item/fridge/scene.gltf" position="2.70033 0.25397 -31.02376" scale="0.1 0.1 0.1" rotation=""></a-entity>
   <a-entity id="Livingroom" gltf-model="asset/item/living_room/scene.gltf" position="-15.35099 -0.5 62.57911" scale="14.5 10.5 10" rotation="0 180 0"></a-entity>
@@ -162,7 +165,7 @@
 
 
 
-<!-- Ground -->
+<!-- Ourdoor -->
 <a-entity id="Ground Area">
   <a-entity id="Ground right" static-body="" geometry="height: 10; width: 205; depth: 3" position="96.21128 4.38139 10.80827" rotation="0 90 0" material="src: texture/wall-glass.jpg; repeat: 15 1; roughness: 1"  shadow="cast: true; receive: true"></a-entity>
   <a-entity id="Ground left" static-body="" geometry="height: 10; width: 205; depth: 3" position="-108.09086 4.38139 10.80827" rotation="0 90 0" material="src: texture/wall-glass.jpg; repeat: 15 1; roughness: 1"  shadow="cast: true; receive: true"></a-entity>
@@ -173,20 +176,38 @@
   <a-entity id="Gravel-2" static-body="" geometry="depth: 42.86; height: 0.1; width: 60" position="-77.20082 -0.321 89.012" material="src: texture/gravel.jpg; repeat: 3 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
   <a-entity id="Path" static-body="" geometry="depth: 42.86; height: 1; width: 10.5" position="33.3 -0.32066 89.012" material="src: texture/rock.jpg; repeat: 1 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
   <a-entity id="Path-2" static-body="" geometry="depth: 42.86; width: 10.5" position="-42.10339 -0.321 89.012" material="src: texture/rock.jpg; repeat: 1 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
+  <a-entity id="outdoor-table" gltf-model="asset/item/outdoor_table/scene.gltf" position="-99.81945 -0.5 51.17405" scale="1.2 1.2 1.2"></a-entity>
+  <a-entity id="tree" gltf-model="asset/plant/low_poly_tree/scene.gltf" position="-31.49268 -0.5 104.989" scale="5 7 5"></a-entity>
+  <a-entity id="tree-2" gltf-model="asset/plant/low_poly_tree/scene.gltf" position="21.54831 -0.5 79.40645" scale="5 7 5" rotation="0 180 0"></a-entity>
+  <a-entity id="tree-3" gltf-model="asset/plant/low_poly_tree/scene.gltf" position="-103.44844 -0.5 104.989" scale="5 7 5"></a-entity>
+  <a-entity id="tree-4" gltf-model="asset/plant/low_poly_tree/scene.gltf" position="-103.44844 -0.5 -33.45533" scale="5 7 5" rotation="0 90 0"></a-entity>
+  <a-entity id="tree-5" gltf-model="asset/plant/low_poly_tree/scene.gltf" position="-103.44844 -0.5 46.67882" scale="5 7 5" rotation="0 90 0"></a-entity>
+  <a-entity id="tree-6" gltf-model="asset/plant/low_poly_tree/scene.gltf" position="39.00496 -0.5 -86.3187" scale="5 7 5"></a-entity>
+  <a-entity id="tree-7" gltf-model="asset/plant/low_poly_tree/scene.gltf" position="-59.17157 -0.5 -86.3187" scale="5 7 5"></a-entity>
+  <!-- Patio -->
+  <a-entity id="Ground" static-body="" geometry="depth: 42.86; height: 0.1; width: 33" position="-62.42566 -0.321 41.81174" material="src: texture/item/clapboard.jpg; repeat: 1 2; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
+  <a-entity id="outdoor-table1" gltf-model="asset/item/outdoor_table__chairs/scene.gltf" position="-66.69655 -0.321 52.45042" scale="1.2 1.2 1.2"></a-entity>
+  <a-entity id="sofa-outdoor" gltf-model="asset/item/sofa/scene.gltf" position="-56.67799 -0.321 25.01942" scale="7 7 7"></a-entity>
+  <a-entity id="Ground left-2" static-body="" geometry="height: 6; width: 32; depth: 2" position="-63.2558 2.70001 64.55366" rotation="" material="src: texture/wall-glass.jpg; repeat: 10 1; roughness: 1" shadow=""></a-entity>
+  <a-entity id="left-2" static-body="" geometry="height: 6; width: 28; depth: 2" position="-78.27198 2.70001 51.505" rotation="0 90 0" material="src: texture/wall-glass.jpg; repeat: 10 1; roughness: 1" shadow=""></a-entity>
+  <a-entity id="left-3" static-body="" geometry="height: 6; width: 10; depth: 2" position="-78.27198 2.70001 23.37901" rotation="0 90 0" material="src: texture/wall-glass.jpg; repeat: 5 1; roughness: 1" shadow=""></a-entity>
+
   <!-- Pool -->
   <a-entity id="Pool">
   <a-entity id="water" geometry="width: 0.02; height: 6.3; depth: 2.6" material="color: #051fe6; opacity: 0.7; transparent: true; roughness: 0.1" position="-76.21772 1 88.59023" rotation="0 0 90" scale="8 8 8"></a-entity>
   <a-entity id="" geometry="width: 0.02; height: 6.3; depth: 2.6" material="color: #ffffff; transparent: true; roughness: 0.1" position="-76.218 -0.2894 88.59" rotation="0 0 90" scale="8 8 8"></a-entity>
-  <a-entity static-body="" geometry="height: 6.6; width: 0.3; depth: 0.2" position="-76.21772 0.606 77.22399" material="src: images/black.jpg; repeat: 10 10" scale="8 8 8" rotation="0 0 90"></a-entity>
-  <a-entity static-body="" geometry="height: 6.6; width: 0.3; depth: 0.2" position="-76.21772 0.606 99.49779" material="src: images/black.jpg; repeat: 10 10" scale="8 8 8" rotation="0 0 90"></a-entity>
-  <a-entity static-body="" geometry="height: 2.62; width: 0.3; depth: 0.2" position="-101.83203 0.64333 88.34044" material="src: images/black.jpg; repeat: 10 10" scale="8 8 8" rotation="0 90 90"></a-entity>
-<a-entity static-body="" geometry="height: 2.62; width: 0.3; depth: 0.2" position="-50.6166 0.64333 88.34044" material="src: images/black.jpg; repeat: 10 10" scale="8 8 8" rotation="0 90 90"></a-entity>
+  <a-entity static-body="" geometry="height: 6.6; width: 0.3; depth: 0.2" position="-76.21772 0.606 77.22399" material="" scale="8 8 8" rotation="0 0 90"></a-entity>
+  <a-entity static-body="" geometry="height: 6.6; width: 0.3; depth: 0.2" position="-76.21772 0.606 99.49779" material="" scale="8 8 8" rotation="0 0 90"></a-entity>
+  <a-entity static-body="" geometry="height: 2.62; width: 0.3; depth: 0.2" position="-101.83203 0.64333 88.34044" material="" scale="8 8 8" rotation="0 90 90"></a-entity>
+<a-entity static-body="" geometry="height: 2.62; width: 0.3; depth: 0.2" position="-50.6166 0.64333 88.34044" material="" scale="8 8 8" rotation="0 90 90"></a-entity>
 </a-entity>
 </a-entity>
 <!-- Garage -->
 <a-entity id="Garage">
 <a-entity id="Wall Right Garage" static-body="" geometry="height: 25; width: 50.52; depth: 2" position="84.45515 7.5 20.62592" rotation="0 90 0" material="roughness: 1; repeat: 6 1; src: texture/wall/white-wall-textures.jpg"></a-entity>
 <a-entity id="Wall Behind Garage" static-body="" geometry="height: 25; width: 43; depth: 2" position="63.70994 7.5 -3.43784" rotation="" material="roughness: 1; repeat: 6 1; src: texture/wall/white-wall-textures.jpg"></a-entity>
+<a-entity id="Garage-2" static-body="" geometry="height: 21; width: 11; depth: 2" position="48.23392 9.34093 46.74458" rotation="" material="roughness: 1; repeat: 6 1; src: texture/wall/white-wall-textures.jpg"></a-entity>
+<a-entity id="Garage-3" static-body="" geometry="height: 21; width: 11.7; depth: 2" position="79.57525 9.34093 46.74458" rotation="" material="roughness: 1; repeat: 6 1; src: texture/wall/white-wall-textures.jpg"></a-entity>
 <a-entity id="floor" static-body="" geometry="depth: 44; height: 0.5; width: 41" position="63.00559 -0.95364 21.89104" material="src: texture/rock.jpg; repeat: 1 5; shader: flat; side: double" rotation="" scale="1 1 1.1"></a-entity>
 </a-entity>
 
@@ -245,6 +266,7 @@
   </a-entity>
   </a-entity>
   <!-- Kitchen -->
+  <a-entity id="lightkitchen" light="type: point; decay: 0.5; distance: 20; color: #ffffff" position="40.64649 18.39591 -12.55419" scale="0.5 0.5 0.5" rotation="0 180 0"></a-entity>
   <a-entity id="Kitchen">
 
     <a-entity id="CeilingFan" obj-model="mtl: asset/item/fan/540 Ceiling Fan.mtl; obj: asset/item/fan/540 Ceiling Fan.obj" position="19.9509 15.5613 -8.97225" rotation="0 296.664 0" scale="0.02 0.02 0.02" animation="property: rotation; dur: 500; from: 0 0 0; to: 0 360 0; easing: linear; loop: true"></a-entity>
@@ -269,7 +291,8 @@
   </a-entity>
 
 <!-- Living Room -->
-<a-entity id="carpet" static-body="" geometry="height: 20; width: 25; depth: 0.1" position="-15.42595 0.4 43.29795" rotation="90 0 0" material="roughness: 1; src: texture/item/carpet-texture.jpg" shadow=""></a-entity>
+  <a-entity id="carpet" static-body="" geometry="height: 20; width: 25; depth: 0.1" position="-15.42595 0.4 43.29795" rotation="90 0 0" material="roughness: 1; src: texture/item/carpet-texture.jpg" shadow=""></a-entity>
+  <a-entity id="carpet-2" static-body="" geometry="height: 40; width: 30; depth: 0.1" position="23.77833 0.4 38.84436" rotation="90 0 0" material="roughness: 1; src: texture/item/carpet-brown-textures.jpg" shadow=""></a-entity>
   <a-entity id="wall room" static-body="" geometry="height: 25; width: 45" position="-23.78428 7.5 16.98675" rotation="" material="roughness: 1; src: texture/wall/white-wall-textures.jpg" shadow=""></a-entity>
     <!-- TV -->
     <a-box id="TV" position="-15.372 7.89791 63.46684" depth="0.05" height="2" width="3" color="#555" material="" geometry="depth: 0.1; height: 5; width: 8" scale="2.5 2 2">
@@ -282,16 +305,18 @@
     <!-- Art -->
     <a-entity static-body="" geometry="depth: 20; height: 10; width: 0.1" position="-15.62847 12.39763 17.86965" material="src: texture/art/ink-circular-sketch-clouds-ship.jpg" scale="" rotation="0 90 0"></a-entity>
     <a-entity static-body="" geometry="depth: 16; height: 19; width: 0.1" position="-46.05985 9.8824 25.80222" material="src: texture/art/owl-bird-colorful-flowers-generative-ai.jpg" scale="" rotation=""></a-entity>
-    <a-entity static-body="" geometry="depth: 20; height: 10; width: 0.1" position="23.38293 13.55639 -34" material="src: texture/art/colorful-image-woman-s-face-with-words-word-bottom.jpg" scale="" rotation="0 90 0"></a-entity>
+    <a-entity static-body="" geometry="depth: 17; height: 10; width: 0.1" position="15.01301 13.93474 -34" material="src: texture/art/colorful-image-woman-s-face-with-words-word-bottom.jpg" scale="" rotation="0 90 0"></a-entity>
     <a-entity static-body="" geometry="depth: 15; height: 8; width: 0.1" position="41.41235 9.15731 38.24907" material="src: texture/art/131081.jpg" scale="" rotation=""></a-entity>
     <a-entity static-body="" geometry="depth: 15; height: 8; width: 0.1" position="-63.39587 14.13236 17.20682" material="src: texture/art/2728px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" scale="" rotation="0 90 0"></a-entity>
+    <a-entity static-body="" geometry="depth: 8; height: 10; width: 0.1" position="-8.74447 12.97882 16.3219" material="src: texture/art/2151145008.jpg" scale="" rotation="0 90 0"></a-entity>
     <a-box id="living-room-picture" src="./texture/image/3481.jpg" material="" geometry="depth: 0.1; height: 8; width: 8" position="-29.40204 9.74452 -1.7142"></a-box>
     <!--Fish-->
-  <a-entity id="fish" position="14.998 5.044 10.72524" scale="1.2 1.2 1.5">
-    <a-box src="./asset/video/fish.mov" position="-3.87845 2.49338 1.07046" rotation="0 90.10964539801972 0" color="#4CC3D9" material="" geometry="" scale="1.65613 1.83041 4.95918"></a-box>
-    <a-box position="-3.87191 0.6562 1.07774" rotation="0 90 0" color="black" scale="1.65613 1.83041 4.95918" material="" geometry=""></a-box>
-    <a-box position="-3.87191 3.61153 1.07774" rotation="0 90 0" color="black" scale="1.65613 0.47233 4.95918" material="" geometry=""></a-box>
-  </a-entity>
+    <a-entity id="Cabinet-3" gltf-model="asset/item/bedside_andrea/scene.gltf" position="16.52364 -0.07471 -31.03512" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
+    <a-entity id="fish" position="20.28833 5.4 -33.6366" scale="1.2 1.2 2">
+      <a-box src="./asset/video/fish.mov" position="-3.87845 2.49338 1.07046" rotation="0 90.10964539801972 0" color="#4CC3D9" material="" geometry="" scale="1.65613 1.83041 4.95918"></a-box>
+      <a-box position="-3.87191 0.6562 1.07774" rotation="0 90 0" color="black" scale="1.65613 1.83041 4.95918" material="" geometry=""></a-box>
+      <a-box position="-3.87191 3.61153 1.07774" rotation="0 90 0" color="black" scale="1.65613 0.47233 4.95918" material="" geometry=""></a-box>
+    </a-entity>
     </a-scene>
   </body>
 </html>

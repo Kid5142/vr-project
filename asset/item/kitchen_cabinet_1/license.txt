@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kitchen cabinet 1
+* source:	https://sketchfab.com/3d-models/kitchen-cabinet-1-6ad39b0f52ad439ea12cbfdc1a1dd37f
+* author:	ms_Butor (https://sketchfab.com/butortervezo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kitchen cabinet 1" (https://sketchfab.com/3d-models/kitchen-cabinet-1-6ad39b0f52ad439ea12cbfdc1a1dd37f) by ms_Butor (https://sketchfab.com/butortervezo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
